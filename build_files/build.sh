@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y lmms liquidctl obs-studio zsh openrazer-daemon discord virt-manager gparted vlc
+dnf5 install -y lmms liquidctl obs-studio zsh virt-manager gparted vlc
 dnf5 remove -y lact orca krfb kdeconnectd kwalletmanager5 fcitx5 cups input-remapper
 
 # Use a COPR Example:
