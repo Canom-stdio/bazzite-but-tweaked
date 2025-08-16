@@ -10,7 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y lmms liquidctl obs-studio zsh openrazer-daemon discord virt-manager gparted vlc
+dnf5 remove -y lact orca krfb kdeconnectd kwalletmanager5 fcitx5 cups input-remapper
 
 # Use a COPR Example:
 #
@@ -22,3 +23,6 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl mask tpm2.target
+systemctl mask bluetooth.target
+systemctl mask remote-fs.target
