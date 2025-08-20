@@ -10,8 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y lmms liquidctl obs-studio zsh virt-manager gparted vlc
-dnf5 remove -y lact orca krfb kdeconnectd kwalletmanager5 fcitx5 cups input-remapper
+dnf5 install -y lmms liquidctl obs-studio zsh virt-manager gparted vlc mono-core mono-devel
+dnf5 remove -y lact orca krfb kdeconnectd kwalletmanager5 fcitx5 cups input-remapper gnome-disk-utility
 
 # Use a COPR Example:
 #
@@ -26,3 +26,4 @@ systemctl enable podman.socket
 systemctl mask tpm2.target
 systemctl mask bluetooth.target
 systemctl mask remote-fs.target
+systemctl mask remote-fs-pre.target
